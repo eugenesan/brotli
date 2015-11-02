@@ -16,3 +16,26 @@ file.
 
 Brotli mailing list:
 https://groups.google.com/forum/#!forum/brotli
+
+libbrotli
+=========
+
+Builds libraries out of brotli decode and encode sources, using autotools.
+
+'brotlidec' is the library for decoding, decompression
+'brotlienc' is the library for encoding, compression
+
+To build:
+    * Make sure you have `libtool`, `autoconf` and `automake` installed.
+    * Configure and build:
+        $ ./autogen.sh
+        $ ./configure
+        $ make
+    * Install libraries and include files:
+        $ make install
+
+To compile against libbrotli include relevant headers:
+        #include <brotli/dec/decode.h>
+        #include <brotli/enc/encode.h>
+
+libbrotli is opensource under MIT license.
